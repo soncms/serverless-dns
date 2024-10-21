@@ -29,6 +29,9 @@ LOG_LEVEL = "debug"
 WORKER_ENV = "development"
 CLOUD_PLATFORM = "cloudflare"
 
+[observability]
+enabled = true
+head_sampling_rate = 1
 ##################
 #------PROD------#
 ##################
@@ -75,10 +78,6 @@ LOG_LEVEL = "logpush"
 WORKER_ENV = "production"
 CLOUD_PLATFORM = "cloudflare"
 CF_LOGPUSH_R2_PATH = "qlog/"
-
-[env.one.observability]
-enabled = true
-head_sampling_rate = 1 # optional
 
 ##################
 #-----SECRETS----#
